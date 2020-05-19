@@ -1,27 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-echo "Hello World!"
+source is-installed.bash
 
-which vim >& /dev/null
+echo "Installed software:"
 
-if [ "$?" -eq "0" ]; then
-  echo "[x] vim exists"
-else
-  echo "[ ] vim exists"
-fi
-
-which tmux >& /dev/null
-
-if [ "$?" -eq "0" ]; then
-  echo "[x] tmux exists"
-else
-  echo "[ ] tmux exists"
-fi
-
-which git >& /dev/null
-
-if [ "$?" -eq "0" ]; then
-  echo "[x] git exists"
-else
-  echo "[ ] git exists"
-fi
+for software in git tmux vim; do
+  if isInstalled $software; then
+    echo "[x] $software"
+  else
+    echo "[ ] $software"
+  fi
+done
