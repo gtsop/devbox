@@ -3,7 +3,7 @@
 load is-installed
 
 TEMP_PATH=`mktemp -d`
-TEMP_SOFTWARE=`mktemp -p $TEMP_PATH`
+TEMP_SOFTWARE=`mktemp $TEMP_PATH/devbox.XXXXXX`
 
 setup() {
   touch $TEMP_SOFTWARE
