@@ -17,3 +17,11 @@ if [ "$?" -eq "0" ]; then
 else
   echo "[ ] tmux exists"
 fi
+
+which git >& /dev/null
+
+if [ "$?" -eq "0" ]; then
+  echo "[x] git exists"
+else
+  echo "[ ] git exists"
+fi
