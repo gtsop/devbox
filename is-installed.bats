@@ -1,6 +1,6 @@
 #!/usr/bin/env bats
 
-load is-installed.sh
+load is-installed
 
 @test "isInstalled returns 0 when software is installed" {
   run isInstalled someSoftware
