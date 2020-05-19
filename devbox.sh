@@ -2,7 +2,7 @@
 
 echo "Hello World!"
 
-which vimm >& /dev/null
+which vim >& /dev/null
 
 if [ "$?" -eq "0" ]; then
   echo "[x] vim exists"
